@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="tictac.css">
+
+    <title>Tic-Tac-Toe</title>
+
+</head>
+<body>
+    
+    <h1>Welcome to Kelli's tic-tac-toe game!!</h1>
+
+    <h2>How to play:</h2>
+
+        <p>Players choose which game piece they'd like to have ("X" or "O"). Whoever is up first will put their mark in one of the nine boxes in the grid. Players take turns putting their marks in empty squares. You cannot put your mark on a square with a mark already in it.
+        </p>
+        <p>The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.
+        </p>
+        <p>When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie. Cat's game!
+        </p>
+        <p>Press <span style= "font-style: italic">Play!</span> to start the game. Good luck!
+        </p>
+
+        <!-- Bootstrap button option: 
+        <a href="#" class="startgame" "btn btn-success btn-lg active" role="button">Play!</a> -->
+
+    <button class = startGame>Play!</button>
+    <!-- DONE - When button pressed, clear the board
+        -->
+
+    <!-- When button pressed, say who's turn it is (make it random)
+        -->
+    <div id = "playerTurn"></div>
+
+    <table class = "myTable">
+        <tr>
+            <td class = "square" id = "s1">x</td>
+            <td class = "square" id = "s2">x</td>
+            <td class = "square" id = "s3"></td>
+        </tr>    
+        <tr>
+            <td class = "square" id = "s4"></td>
+            <td class = "square" id = "s5">x</td>
+            <td class = "square" id = "s6"></td>
+        </tr>   
+        <tr>
+            <td class = "square" id = "s7"></td>
+            <td class = "square" id = "s8"></td>
+            <td class = "square" id = "s9">x</td>
+        </tr>    
+    </table>  
+
+    <!-- If it's X's turn, make his marker on the board and 'X'.
+    If it's O's turn, make his marker on the board and 'O'. -->
+    <!--  When a sqaure is clicked, mark it with the corresponding player's mark (X or O). 
+
+        When a square is clicked, switch to the next player to make their move.  -->
+
+    <!--    If a square has something in it already, do not allow a player to put their mark in it.
+    -->
+
+    <!-- When a player gets 3 in a row (vertical, horizontal, or diagonal), annouce who won and do not allow any other moves on the board.
+    -->
+ <!--    If ((player1 === "s1", "s2", "s3") || (player1 === "s4", "s5", "s6") || (player1 === "s7", "s8", "s9") || (player1 === "s1", "s4", "s7") || (player1 === "s2", "s5", "s8") || (player1 === "s3", "s6", "s9") || (player1 === "s1", "s5", "s9") || (player1 === "s3", "s5", "s7")) {
+
+        return player1 + " wins!";
+
+    } -->
+
+<!--     If all squares are full and there is now winner, announce a tie (cat's game) and prompt them to click Play! again to start a new game.
+ -->
+
+    <script src= "tictac.js"></script>
+</body>
+</html>
