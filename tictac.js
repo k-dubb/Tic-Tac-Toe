@@ -2,6 +2,7 @@
   $(function () {
 
     var player = "X";
+    $("#playerTurn").text("It's X's turn");
 
     //Clear the board
     $(".startGame").on("click", function() {
@@ -10,7 +11,7 @@
 
     });
 
-    //When a square is clicked on, add in the appropraite player's marker. Then switch players 
+    //When a square is clicked on, add in the appropraite player's marker. Then switch players. 
     $(".square").on("click", function() {
 
         $(this).html(player);
@@ -18,58 +19,24 @@
 
     });
        
-    //switch between players
+    //Switch between players and say who's turn it is.
     function switchPlayers() {
 
         if (player === "X") {
 
             player = "O";
-       
+            $("#playerTurn").text("It's O's turn");
+
         }
         else {
        
             player = "X";
+            $("#playerTurn").text("It's X's turn");
        
         }
 
     }
 
-    //Say who's turn it is.
-
- /*   while player === X {
-
-        $(".playerTurn").text("It's X's turn");
-    }
-
-    else {
-
-        $(".playerTurn").text("It's O's turn");
-    
-    }
-    
-
-    //Another option - which doesn't work yet $(".playerTurn").text("It is " + player1 + " turn");
- //  function message(msg) {
-
-  //      document.getElementById("playerTurn").innerText=msg;
-
- //   }
-
-    
-    //Mark the square with an X or an O (and switch players after the move is made)
- //   function playerMove () {
-
-//        square.innerText = player;
- //       switchPlayers();     
-
- //   }
-
-
-
-   // $(".square").on("click", function() {
-    
-        
-   // });
 
 
 //If it's X's turn, make his marker on the board and 'X'.
