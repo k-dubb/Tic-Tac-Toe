@@ -10,7 +10,6 @@
 
     });
 
-
     //When a square is clicked on, add in the appropraite player's marker. Then switch players 
     $(".square").on("click", function() {
 
@@ -19,30 +18,36 @@
 
     });
        
-        //square.innerText = player;
-//       
-
-//        playerMove();
-
-  
-
-    //switch players
+    //switch between players
     function switchPlayers() {
 
         if (player === "X") {
 
-            player === "O";
+            player = "O";
        
         }
         else {
        
-            player === "X";
+            player = "X";
        
         }
 
     }
 
     //Say who's turn it is.
+
+ /*   while player === X {
+
+        $(".playerTurn").text("It's X's turn");
+    }
+
+    else {
+
+        $(".playerTurn").text("It's O's turn");
+    
+    }
+    
+
     //Another option - which doesn't work yet $(".playerTurn").text("It is " + player1 + " turn");
  //  function message(msg) {
 
