@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="tictac.css">
 
@@ -12,31 +14,38 @@
 
 </head>
 <body>
+
+    <div class = "page-header">
+        <h1>Welcome to Kelli's tic-tac-toe game!!</h1>
+    </div>
     
-    <h1>Welcome to Kelli's tic-tac-toe game!!</h1>
+    <div class="panel panel-success">
+        <div class="panel-heading" id = "titleOfPanel">
+           <h2 class = "panel-title" id = "title2">How to play:</h2>
+        </div>
+        <div class="panel-body" id = "bodyOfPanel">
+            <p>Players choose which game piece they'd like to have ("X" or "O"). Whoever is up first will put their mark in one of the nine boxes in the grid. Players take turns putting their marks in empty squares. You cannot put your mark on a square with a mark already in it.
+            </p>
+            <p>The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.
+            </p>
+            <p>When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie. Cat's game!
+            </p>
+            <p>Press <span style= "font-style: italic">Play!</span> to start the game. Good luck!
+            </p>
+        </div>       
+    </div>
 
-    <h2>How to play:</h2>
+        <a href="#" class="btn btn-success btn-lg active" id = "theButton" role="button">Play!</a>
 
-        <p>Players choose which game piece they'd like to have ("X" or "O"). Whoever is up first will put their mark in one of the nine boxes in the grid. Players take turns putting their marks in empty squares. You cannot put your mark on a square with a mark already in it.
-        </p>
-        <p>The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.
-        </p>
-        <p>When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie. Cat's game!
-        </p>
-        <p>Press <span style= "font-style: italic">Play!</span> to start the game. Good luck!
-        </p>
-
-        <!-- Bootstrap button option: 
-        <a href="#" class="startgame" "btn btn-success btn-lg active" role="button">Play!</a> -->
-
-    <button class = startGame>Play!</button>
-    <!-- DONE - When button pressed, clear the board
+   <!--  <button class = startGame>Play!</button>
+    --> <!-- DONE - When button pressed, clear the board
         -->
 
     <!-- When button pressed, say who's turn it is (make it random)
         -->
-    <div id = "playerTurn"></div>
-
+   <!--  <div id = "playerTurn"></div> -->
+    <div class = "well" id = "playerTurn"></div>
+    
     <table class = "myTable">
         <tr>
             <td class = "square" id = "s1"></td>
