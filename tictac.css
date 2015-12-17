@@ -1,10 +1,7 @@
-body {
-    background-color: white;
-}
-
 .page-header {
     background-color: black;
     height: 80px;
+    padding-right: 80px;
 }
 
 h1 {
@@ -20,6 +17,7 @@ h1 {
     font-size: 24px;
     float: right;
     color: white;
+
 }
 
 p{
@@ -34,8 +32,8 @@ p{
 
 tr, td {
     border: 2px solid black;
-    height: 100px; 
-    width: 100px;
+    height: 110px; 
+    width: 110px;
     text-align: center;
     font-size: 24px;
     background-color: lightgray;
@@ -59,12 +57,16 @@ tr, td {
 }
 */
 
-#bodyOfPanel {
-    background-color: #d6e9c6;
-}
-
 #titleOfPanel {
     background-color: #3c763d;
+    height: 50px;
+    width: 45%;
+    float: right;
+}
+
+#bodyOfPanel {
+    background-color: #d6e9c6;
+    width: 45%;
 }
 
 #theButton {
