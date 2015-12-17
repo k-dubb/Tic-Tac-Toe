@@ -1,33 +1,42 @@
+body{
+    background-color: #daf0f2;
+}
+
 .page-header {
-    background-color: black;
+    background-color: #2ad3e1;
     height: 80px;
     padding-right: 80px;
+    border: 2px solid black;
+    border-right: none;
+    border-left: none;
+}
+
+.panel-success {
+    border: none;
 }
 
 h1 {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 50px;
-    float: right;
-    color: white;
-}
-
-
-
-#title2{
-    font-size: 24px;
-    float: right;
-    color: white;
-
-}
-
-p{
-    font-size: 14px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 40px;
     float: right;
     color: black;
 }
 
+#title2{
+    font-size: 24px;
+    float: left;
+    color: white;
+}
+
+p{
+    font-size: 16px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .myTable {
     margin-left: 80px;
+    margin-bottom: 80px;
 }
 
 tr, td {
@@ -36,7 +45,7 @@ tr, td {
     width: 110px;
     text-align: center;
     font-size: 24px;
-    background-color: lightgray;
+    background-color: #e1e1e1;
 }
 
 .square {
@@ -46,6 +55,11 @@ tr, td {
     text-align: center;
     font-family: 'Indie Flower', cursive;
 
+}
+
+.panel {
+    border: none;
+    -webkit-box-shadow: none;
 }
 /*
 .startgame {
@@ -58,34 +72,67 @@ tr, td {
 */
 
 #titleOfPanel {
-    background-color: #3c763d;
+    background-color: #2a9ce1;
     height: 50px;
     width: 45%;
     float: right;
+    border: 1px solid black;
+    margin-right: 80px;
+    margin-top: 10px; 
+    font-family: 'Open Sans', sans-serif;
+
 }
 
-#bodyOfPanel {}
-    background-color: #d6e9c6;
+#bodyOfPanel {
+    background-color: #e1e1e1;
     width: 45%;
+    border: 1px solid black;
+    float: right;
+    margin-right: 80px; 
 }
 
-#theButton {
+#startGame {
     font-size: 36px;
     padding: 10px 40px;
-    color: white;
+    color: black;
+    background-color: #2ad3e1;
+    border-color: black;
+    box-shadow: 0 2px 2px;
     float: right;
+    margin: 0px 280px 80px 10px;
+    position: relative;
+    top: -120px;
+    font-family: 'Open Sans', sans-serif;
 }
-
+/*
+#startgame {
+    font-size: 36px;
+    padding: 10px 40px;
+    color: black;
+    background-color: #2ad3e1;
+    border-color: black;
+    box-shadow: 0 2px 2px;
+    float: right;
+    margin: 0px 280px 80px 10px;
+    position: relative;
+    top: -120px;
+    font-family: 'Open Sans', sans-serif;
+}
+*/
 .well {
-    background-color: black;
+    background-color: #2a9ce1;
+    border: 1px solid black;
 }
 
 #playerTurn {
     font-size: 18px;
     color: white;
-    font-weight: bold;
-    margin: 10px 160px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px 170px;
+    padding: 8px 0 8px 0;
     display: inline-block;
+    width: 150px;
+    text-align: center;
 }
+
+
