@@ -8,18 +8,17 @@
     //Clear the board
     $("#startGame").on("click", function() {
         
+        $(".square").removeClass("selected");
         whoGoesFirst();     
         $(".square").text("");
         numberOfPlays = 1;
-        //$(".square")removeClass("selected");
 
     });
 
     //Make it random who gets to go first
-
     function whoGoesFirst() { 
     
-        var player = "X";
+        player = "X";
 
         if (Math.random() < 0.5) {
 
@@ -29,49 +28,43 @@
 
         $("#playerTurn").text(player + " gets to start");
 
-    }
+        }
 
  //   $("#playerTurn").text("It's X's turn");
 
     //When a square is clicked on, add in the appropraite player's marker. Then switch players. 
-    
-
-
     $(".square").on("click", function() {
 
-        $(this).html(player);
-        switchPlayers();
-        numberOfPlays++;
+        if ($(this).hasClass("selected")) {
     
-    });
-    
-     /*   if ($(this).hasClass("selected")) {
-    
-            alert ("That box is already filled");
+            alert("That box is already filled");
             //winner = player;
         }
+
         else {
 
-         // $(this).addClass("selected");    
-        //}
-      if (winner !== null) {
-            alert(winner + " already won the game!");
+            $(this).addClass("selected"); 
+            $(this).html(player);
+            switchPlayers();
+            numberOfPlays++;   
         }
-    
+
     });
- */    //Check for winner and announce who it is if there is one.  
+
+    //Check for winner and announce who it is if there is one.  
     //Switch between players and say who's turn it is.
     function switchPlayers() {
 
         if (checkForWinner(player)) {
         
             alert("Congratulations, " + player + "! You won! To play again, click Play!"); 
+            //return null;
             
         }
 
         else if (numberOfPlays === 9) {
             
-            alert ("Oh no, it's a tied game! Click Play! to start a new game");
+            alert("Oh no, it's a tied game! Click Play! to start a new game");
         }
 
         else if (player === "X") {
@@ -119,13 +112,5 @@
         return result;
 
     }
-
-/*   
-    
-
-If a square has something in it already, do not allow a player to put their mark in it.
-
-
-*/
 
 });
