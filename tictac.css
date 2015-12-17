@@ -64,7 +64,7 @@ tr, td {
     float: right;
 }
 
-#bodyOfPanel {
+#bodyOfPanel {}
     background-color: #d6e9c6;
     width: 45%;
 }
