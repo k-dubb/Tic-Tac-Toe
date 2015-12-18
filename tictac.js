@@ -1,5 +1,5 @@
-  //document ready function
-  $(function () {
+//document ready function
+$(function () {
 
     var player = "X";
     var winner = null;
@@ -28,17 +28,14 @@
 
         $("#playerTurn").text(player + " gets to start");
 
-        }
+    }
 
- //   $("#playerTurn").text("It's X's turn");
-
-    //When a square is clicked on, add in the appropraite player's marker. Then switch players. 
+    //When a square is clicked on, add in the appropriate player's marker. You cannot put a marker in a box already filled. 
     $(".square").on("click", function() {
 
         if ($(this).hasClass("selected")) {
     
             alert("That box is already filled");
-            //winner = player;
         }
 
         else {
@@ -51,15 +48,12 @@
 
     });
 
-    //Check for winner and announce who it is if there is one.  
-    //Switch between players and say who's turn it is.
+    //Check for winner and announce who it is if there is one.  Otherwise switch between players and say who's turn it is.
     function switchPlayers() {
 
         if (checkForWinner(player)) {
-        
+
             alert("Congratulations, " + player + "! You won! To play again, click Play!"); 
-            //return null;
-            
         }
 
         else if (numberOfPlays === 9) {
@@ -71,8 +65,8 @@
 
             player = "O";
             $("#playerTurn").text("It's O's turn");
-
         }
+
         else {
        
             player = "X";
@@ -81,36 +75,36 @@
 
     }
 
-    function checkThreeRow(a, b, c, marker) {
+    //Check for 3 in a row for one marker (X or O) (using the getSquare fn to look at the specific squares)
+    function checkThreeRow (a, b, c, marker) {
         
         var result = false;
 
         if (getSquare(a) === marker && getSquare(b) === marker && getSquare(c) === marker) {
             
             result = true;
-
         }
 
         return result;
     }
-
-    function getSquare(number) {
+    
+    //Tells you what the specific square is via it's id name 
+    function getSquare (number) {
 
         return document.getElementById("s" + number).innerText;
-
     }
 
-    function checkForWinner(marker) {
+    //All the ways you can win (horizontal, vertical, or diagonal)
+    function checkForWinner (marker) {
 
         var result = false;
 
         if (checkThreeRow(1, 2, 3, marker) || checkThreeRow(4, 5, 6, marker) || checkThreeRow(7, 8, 9, marker) || checkThreeRow(1, 4, 7, marker) || checkThreeRow(2, 5, 8, marker) || checkThreeRow(3, 6, 9, marker) || checkThreeRow(1, 5, 9, marker) || checkThreeRow(3, 5, 7, marker)) {
 
             result = true;
-
         }
-        return result;
 
+        return result;
     }
 
 });
