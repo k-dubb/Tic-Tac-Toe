@@ -3,7 +3,7 @@ $(function () {
 
     var player = "X";
     var winner = null;
-    var numberOfPlays= 1;
+    var numberOfPlays = 1;
 
     //Clear the board
     $("#startGame").on("click", function() {
@@ -12,7 +12,6 @@ $(function () {
         whoGoesFirst();     
         $(".square").text("");
         numberOfPlays = 1;
-
     });
 
     //Make it random who gets to go first
@@ -33,7 +32,8 @@ $(function () {
     //When a square is clicked on, add in the appropriate player's marker. You cannot put a marker in a box already filled. 
     $(".square").on("click", function() {
 
-        if ($(this).hasClass("selected")) {
+        //$(this).css("pointer-events", "none");
+          if ($(this).hasClass("selected")) {
     
             alert("That box is already filled");
         }
@@ -53,7 +53,8 @@ $(function () {
 
         if (checkForWinner(player)) {
 
-            alert("Congratulations, " + player + "! You won! To play again, click Play!"); 
+            alert("Congratulations, " + player + "! You won! To play again, click Play!");
+           // $(".square").css("pointer-events", "none");
         }
 
         else if (numberOfPlays === 9) {
