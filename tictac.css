@@ -5,7 +5,7 @@ body{
 .page-header {
     background-color: #2ad3e1;
     height: 80px;
-    padding-right: 80px;
+    padding-right: 30px;
     border: 2px solid black;
     border-right: none;
     border-left: none;
@@ -35,21 +35,21 @@ p{
 }
 
 .myTable {
-    margin-left: 80px;
+    margin-left: 110px;
     margin-bottom: 80px;
 }
 
 tr, td {
     border: 2px solid black;
-    height: 110px; 
-    width: 110px;
+    height: 125px; 
+    width: 125px;
     text-align: center;
     font-size: 24px;
     background-color: #e1e1e1;
 }
 
 .square {
-    font-size: 72px;
+    font-size: 84px;
     font-weight: bold;
     color: black;
     text-align: center;
@@ -58,6 +58,10 @@ tr, td {
 
 .square:hover {
     background-color: #2ad3e1;
+}
+
+#startGame:hover {
+    background-color: #7ae7bf;
 }
 
 .panel {
@@ -71,10 +75,9 @@ tr, td {
     width: 45%;
     float: right;
     border: 1px solid black;
-    margin-right: 80px;
+    margin-right: 110px;
     margin-top: 10px; 
     font-family: 'Open Sans', sans-serif;
-
 }
 
 #bodyOfPanel {
@@ -82,7 +85,7 @@ tr, td {
     width: 45%;
     border: 1px solid black;
     float: right;
-    margin-right: 80px; 
+    margin-right: 110px; 
 }
 
 #startGame {
@@ -93,9 +96,9 @@ tr, td {
     border-color: black;
     box-shadow: 0 2px 2px;
     float: right;
-    margin: 0px 280px 80px 10px;
+    margin: 0px 315px 80px 10px;
     position: relative;
-    top: -120px;
+    top: -165px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -105,13 +108,13 @@ tr, td {
 }
 
 #playerTurn {
-    font-size: 18px;
+    font-size: 24px;
     color: white;
     font-family: 'Open Sans', sans-serif;
-    margin: 10px 170px;
     padding: 5px 10px;
+    margin-left: 200px;
     display: inline-block;
-    width: 150px;
+    width: 200px;
     text-align: center;
     vertical-align: center;
     height: 40px;
