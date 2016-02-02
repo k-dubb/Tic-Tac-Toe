@@ -1,5 +1,4 @@
-# Tic-Tac-Toe
-### Tic-Tac-Toe Project #1
+# Tic-Tac-Toe Project #1
 
 ### Welcome to Kelli's game of tic-tac-toe!
 
