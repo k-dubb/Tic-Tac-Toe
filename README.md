@@ -10,6 +10,6 @@ When you load the page, you'll find CSS animation of X's and O's crossing right 
 
 Thanks for playing!
 
-##### [http://kellis-tic-tac-toe.bitballoon.com]
+http://kellis-tic-tac-toe.bitballoon.com
 
 
